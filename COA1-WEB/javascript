@@ -1,0 +1,20 @@
+// script.js
+function validateForm() {
+    var phoneRegex = /^[0-9]{10}$/;
+    var phoneInput = document.getElementById("phone");
+    if (!phoneRegex.test(phoneInput.value)) {
+      alert("Please enter a valid phone number.");
+      return false;
+    }
+  
+    var event1 = document.getElementById("event1");
+    var event2 = document.getElementById("event2");
+    var event3 = document.getElementById("event3");
+    if (!event1.checked && !event2.checked && !event3.checked) {
+      alert("Please select at least one event.");
+      return false;
+    }
+  
+    return true;
+  }
+  
